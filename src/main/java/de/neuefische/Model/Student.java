@@ -5,6 +5,8 @@ public class Student {
     private String id;
     private String name;
     private String subject;
+    private String address;
+    private int identityCardNumber;
 
 
     @Override
@@ -13,20 +15,33 @@ public class Student {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", subject='" + subject + '\'' +
+                ", address='" + address + '\'' +
+                ", identityCardNumber=" + identityCardNumber +
                 '}';
     }
 
     // KONSTRUKTOR
-    public Student(String id, String name, String subject) {
+    public Student(String id, String name, String subject, String address, int identityCardNumber) {
         this.id = id;
         this.name = name;
         this.subject = subject;
+        this.address=address;
+        this.identityCardNumber=identityCardNumber;
     }
 
     public Student() {
     }
 
     // GETTER & SETTER
+
+    public int getIndentityCardNumber() {
+        return identityCardNumber;
+    }
+
+    public void setIndentityCardNumber(int indentityCardNumber) {
+        this.identityCardNumber = indentityCardNumber;
+    }
+
     public String getId() {
         return id;
     }
@@ -50,4 +65,13 @@ public class Student {
     public void setSubject(String subject) {
         this.subject = subject;
     }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
 }
